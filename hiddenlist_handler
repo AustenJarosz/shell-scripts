@@ -1,0 +1,37 @@
+#! /bin/sh
+
+ls -la .* > hiddenlist &
+
+ps > pstat &
+
+wait
+
+echo "Done processing requests"
+
+echo "Display contents of files using (display) or delete using (delete)"
+
+read choice
+
+if [ "$choice" = "display" ]
+
+        then 
+        echo "Contents of hiddenlist: "
+        cat hiddenlist
+        echo "Contents of pstat: "
+        cat pstat
+        echo "Contents of wordcount: "
+
+elif [ "$choice" = "delete" ]
+
+        then
+        echo "deleting files"
+        rm hiddenlist
+        rm pstat
+        rm wordcount
+        echo "Files have been deleted"
+
+else
+
+        echo "no valid input"
+
+fi

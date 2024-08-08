@@ -1,0 +1,25 @@
+#! /bin/sh
+
+
+if [ $# -eq 0 ]
+        then
+        echo "No arguments to process"
+        exit 0
+
+else
+        echo "There are $# arguments"
+
+fi
+
+total=0
+
+for arg in "$@"
+        do
+        if [ $(expr $arg % 2) -ne 0 ]
+        then
+                echo "$arg"
+                total=$(expr $total + $arg)
+        fi
+done
+
+echo "Sum of all odd arguments is: $total"

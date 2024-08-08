@@ -1,0 +1,33 @@
+.:
+total 24
+drwxr-xr-x 3 verdelaptop verdelaptop 4096 Aug  8 15:08 .
+drwxr-xr-x 4 verdelaptop verdelaptop 4096 Aug  8 15:03 ..
+drwxr-xr-x 8 verdelaptop verdelaptop 4096 Aug  8 15:03 .git
+-rw-r--r-- 1 verdelaptop verdelaptop   58 Aug  8 15:03 README.md
+-rw-r--r-- 1 verdelaptop verdelaptop    0 Aug  8 15:08 hiddenlist
+-rwxr--r-- 1 verdelaptop verdelaptop  615 Aug  8 15:08 hiddenlist_handler
+-rw-r--r-- 1 verdelaptop verdelaptop  652 Aug  8 15:04 move_script
+-rw-r--r-- 1 verdelaptop verdelaptop    0 Aug  8 15:08 pstat
+
+..:
+total 16
+drwxr-xr-x  4 verdelaptop verdelaptop 4096 Aug  8 15:03 .
+drwxr-x--- 12 verdelaptop verdelaptop 4096 Aug  8 15:08 ..
+drwxr-xr-x  3 verdelaptop verdelaptop 4096 Aug  8 14:55 Leap-year-script
+drwxr-xr-x  3 verdelaptop verdelaptop 4096 Aug  8 15:08 shell-scripts
+
+.git:
+total 52
+drwxr-xr-x 8 verdelaptop verdelaptop 4096 Aug  8 15:03 .
+drwxr-xr-x 3 verdelaptop verdelaptop 4096 Aug  8 15:08 ..
+-rw-r--r-- 1 verdelaptop verdelaptop   21 Aug  8 15:03 HEAD
+drwxr-xr-x 2 verdelaptop verdelaptop 4096 Aug  8 15:03 branches
+-rw-r--r-- 1 verdelaptop verdelaptop  266 Aug  8 15:03 config
+-rw-r--r-- 1 verdelaptop verdelaptop   73 Aug  8 15:03 description
+drwxr-xr-x 2 verdelaptop verdelaptop 4096 Aug  8 15:03 hooks
+-rw-r--r-- 1 verdelaptop verdelaptop  137 Aug  8 15:03 index
+drwxr-xr-x 2 verdelaptop verdelaptop 4096 Aug  8 15:03 info
+drwxr-xr-x 3 verdelaptop verdelaptop 4096 Aug  8 15:03 logs
+drwxr-xr-x 4 verdelaptop verdelaptop 4096 Aug  8 15:03 objects
+-rw-r--r-- 1 verdelaptop verdelaptop  112 Aug  8 15:03 packed-refs
+drwxr-xr-x 5 verdelaptop verdelaptop 4096 Aug  8 15:03 refs

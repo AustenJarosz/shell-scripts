@@ -1,0 +1,32 @@
+#!/bin/sh
+
+if [ $(($# % 2)) -ne 0 ] || [ $# -lt 2 ]
+        then
+        cat << DONE
+Error: must provide an even number of arguments (2 minimum)
+Usage: $0 file subdir [[file sbdir]...]
+DONE
+
+        exit 1
+fi
+
+while [ $# -gt 0 ] 
+        do
+        file=$1
+        dir=$2
+
+        if [ ! -e $file ]
+                then
+                echo "file $file does not exist so it cannot be moved"
+
+        elif [ ! -d $dir ]
+                then
+                echo "directory $dir does not exisit so nothing can be moved to it"
+
+        else
+                mv "$file" "$dir"
+                echo "$file was moved to $dir"
+        fi
+
+        shift 2
+done

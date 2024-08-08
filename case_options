@@ -1,0 +1,53 @@
+#!/bin/ksh
+
+#utilizing select command:
+
+echo "Select one of the options"
+echo "1: clears screen, 2: removes .tmp files, 3: move unused files, 4: display list of subdirectorys, 5: exit" 
+
+select option in 1 2 3 4 5
+do
+        case $option in
+                1)
+                echo "Number 1 pressed, clearing screen"
+                clear
+                ;;
+                2)
+                echo "Number 2 pressed, rm .tmp files"
+                find ~ -name "*.tmp" -exec rm -i {} \;
+                ;;
+                3)
+                echo "Number 3 pressed, something"
+                if [ ! -d "$HOME/oldfiles" ]; then
+                echo "$HOME/oldfiles does not exist."
+                echo "creating $HOME/oldfiles"
+                mkdir $HOME/oldfiles
+                fi
+                echo "moving files to $HOME/oldfiles"
+                find ~ -type f -mtime +14 -exec mv {} $HOME/oldfiles \;
+                echo "displaying files in oldfiles now:"
+                ls -t $HOME/oldfiles
+                ;;
+                4)
+                echo "Number 4 pressed, displaying long listing of subdirectory"
+                while true; do
+                        echo "Enter the name of subdir"
+                        read subdir
+                        if [ -d "$subdir" ]; then
+                        echo "displaying long listing of $subdir:"
+                        ls -l "$subdir"
+                        break
+                        else
+                                echo "Invalid subdir, please try a new subdir"
+                        fi
+                done
+                ;;
+                5)
+                echo "Number 5 pressed, exiting"
+                exit 0
+                ;;
+                *)
+                echo "Not a valid selection, please select number 1-5"
+                ;;
+        esac
+done
